@@ -47,6 +47,8 @@ for (int i = 0; i <= userNumber; i++)
     Console.WriteLine(i);
 }
 
+
+
 //Problem 3
 //A door has a keypad entry. The combination to get in is 13579.
 //Write a while loop that asks the user to enter a key code.
@@ -62,7 +64,7 @@ while (doorLocked == true)
 {
     Console.WriteLine("Enter the Key Code: ");
     int keyEntered = int.Parse(Console.ReadLine());
-    if (keyEntered == 13579)
+    if (keyEntered == keyPadPin)
     {
         Console.WriteLine("Welcome, you may enter!");
         break;
@@ -72,9 +74,6 @@ while (doorLocked == true)
         Console.WriteLine("Try Again");
     }
 }
-
-
-
 
 //Problem 4 - 3 continued
 //Continue the previous exercise, but now add a limited number of tries, say 5.
