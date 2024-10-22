@@ -32,7 +32,7 @@ do
 
 //problem 2
 //Prompt the user for a number.
-Console.Write("Enter a Number.");
+Console.Write("Enter a Number: ");
 int userNumber = int.Parse(Console.ReadLine());
 
 //Use a for loop to output all the numbers from that number to 0.
@@ -47,15 +47,32 @@ for (int i = 0; i <= userNumber; i++)
     Console.WriteLine(i);
 }
 
-
-
-
 //Problem 3
 //A door has a keypad entry. The combination to get in is 13579.
 //Write a while loop that asks the user to enter a key code.
 //The loop will repeat as long as the user enters the wrong code.
 //After the user enters the correct code,
 //the program will print out a welcome message.
+
+int keyPadPin = 13579 ;
+
+bool doorLocked = true;
+
+while (doorLocked == true)
+{
+    Console.WriteLine("Enter the Key Code: ");
+    int keyEntered = int.Parse(Console.ReadLine());
+    if (keyEntered == 13579)
+    {
+        Console.WriteLine("Welcome, you may enter!");
+        break;
+    }
+    else
+    {
+        Console.WriteLine("Try Again");
+    }
+}
+
 
 
 
