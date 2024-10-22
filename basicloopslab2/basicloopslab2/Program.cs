@@ -59,8 +59,12 @@ for (int i = 0; i <= userNumber; i++)
 int keyPadPin = 13579 ;
 
 bool doorLocked = true;
+int numberOfTries = 5;
 
-while (doorLocked == true)
+for (int i = 0; i < numberOfTries; i++)
+{
+
+    while (doorLocked == true )
 {
     Console.WriteLine("Enter the Key Code: ");
     int keyEntered = int.Parse(Console.ReadLine());
@@ -69,11 +73,19 @@ while (doorLocked == true)
         Console.WriteLine("Welcome, you may enter!");
         break;
     }
-    else
+    else if (doorLocked == true && i > numberOfTries)
+       {
+            Console.WriteLine("Try Again") ;
+        }
+   else 
     {
-        Console.WriteLine("Try Again");
-    }
+          Console.WriteLine("Too Many incorrect attempts")  ;
+                break;
+            }
+
+        }
 }
+
 
 //Problem 4 - 3 continued
 //Continue the previous exercise, but now add a limited number of tries, say 5.
