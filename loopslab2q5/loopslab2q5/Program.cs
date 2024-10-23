@@ -18,7 +18,6 @@ do
     if (keyEntered == keyPadPin)
     {
         Console.WriteLine("Welcome, you may enter!");
-        doorLocked = false;
         break;
     }
     else if (doorLocked == true && i == numberOfTries)
